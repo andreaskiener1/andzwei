@@ -18,19 +18,25 @@
 	var R =10;
 	var context = MeinCanvas.getContext('2d');
 	
+	/*
 	MeinCanvas.width = document.documentElement.clientWidth;
 	Meincanvas.height = document.documentElement.clientHeight;
 	var WIDTH = MeinCanvas.width;
 	var HEIGHT = MeinCanvas.height;
+	*/
 	
 	var padlx = 50;
 	var counter = 0;
 	var timer;
-
+	
+	var canv = document.getElementByID("MeinCanvas");
+	canv.width = document.documentElement.clientWidth;
+	canv.height = document.documentElement.clientHeight;
+	var WIDTH = canv.width;
+	var HEIGHT = canv.height;
+	
 	function init(){
-		MeinCanvas.width = document.documentElement.clientWidth;
-		Meincanvas.height = document.documentElement.clientHeight;
-		
+				
 		document.addEventListener('keydown', function(event){
 			console.log(event);
 			console.log(event.key);
