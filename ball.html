@@ -28,6 +28,8 @@
 	var timer;
 
 	function init(){
+		MeinCanvas.width = document.documentElement.clientWidth;
+		Meincanvas.height = document.documentElement.clientHeight;
 		
 		document.addEventListener('keydown', function(event){
 			console.log(event);
