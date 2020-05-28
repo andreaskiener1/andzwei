@@ -10,10 +10,19 @@
 <body>
 <canvas id="MeinCanvas"></canvas>
 <script>
-//Als globale Variablen deklariert um mit allen Functions darauf zugreifen zu können
-document.addEventListener("deviceready", onDeviceReady(), false);
+
+function writeorientation(event){
+	var winkelalpha = event.aplpha;
+	context.font = "25px Arial";
+	context.fillText(ausgabe, 10, 50);
+};	
 	
-function onDeviceReady(){	
+window.onload = function(){
+ window.addEventListener("deviceorientation", writeorientation, false);
+	
+};
+	
+	
 	var x = 20;
 	var y = 200;
 	var dx = 0.5;
@@ -116,7 +125,7 @@ function onDeviceReady(){
 	}//draw	
 	
 	
-}//ondeviceready
+
 
 
 
