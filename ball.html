@@ -28,6 +28,8 @@
 	canv.height = document.documentElement.clientHeight;
 	var WIDTH = canv.width;
 	var HEIGHT = canv.height;
+	
+	var ausgabe = "";
     
     //test
     //in den Entwicklungsbranch...
@@ -56,7 +58,8 @@
 		
 		window.addEventListener('devicemotion', function(event){
 			padlx = padlx + event.accelerationIncludingGravity.x;
-		
+			
+			context.fillText(padlx, 10, 50);
 		
 		});
 		
@@ -102,7 +105,7 @@
 		
 		if (y > HEIGHT - (R + 1)){
 		
-			var ausgabe = "GAME OVER, SCORE: " + counter;
+			ausgabe = "GAME OVER, SCORE: " + counter;
 			context.font = "25px Arial";
 			context.fillText(ausgabe, 10, 50);
 			clearInterval(timer);
