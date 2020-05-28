@@ -11,6 +11,9 @@
 <canvas id="MeinCanvas"></canvas>
 <script>
 //Als globale Variablen deklariert um mit allen Functions darauf zugreifen zu können
+document.addEventListener("devicereadsy", onDeviceRady, flase);
+	
+function onDeviceReady(){	
 	var x = 20;
 	var y = 200;
 	var dx = 0.5;
@@ -125,7 +128,7 @@
 
 	init();
 
-
+}//onDeviceReady
 </script>
 </body>
 
