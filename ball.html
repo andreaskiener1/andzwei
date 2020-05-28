@@ -8,13 +8,13 @@
 </head>
 
 <body>
+	<div id="accel">accel</div>
 <canvas id="MeinCanvas"></canvas>
 <script>
 
 function writeorientation(event){
 	var winkelalpha = event.aplpha;
-	context.font = "25px Arial";
-	context.fillText(winkelalpha, 10, 50);
+	document.getElementById("accel").innerHTML = winkelalpha;
 };	
 	
 window.onload = function(){
