@@ -32,17 +32,8 @@ function onDeviceReady(){
 	var WIDTH = canv.width;
 	var HEIGHT = canv.height;
 	
-	var ausgabe = "";
-    
-    //test
-    //in den Entwicklungsbranch...
-    //neue Zeile
-    
-    //weiterer Kommentar
-	
-	function init(){
-				
-		document.addEventListener('keydown', function(event){
+					
+	document.addEventListener('keydown', function(event){
 			console.log(event);
 			console.log(event.key);
 			if(event.key == 'ArrowLeft' & padlx > 0){
@@ -57,19 +48,19 @@ function onDeviceReady(){
 			}
 			
 		
-		});
+	});//keydown
 		
-		window.addEventListener('devicemotion', function(event){
+	window.addEventListener('devicemotion', function(event){
 			padlx = padlx + event.accelerationIncludingGravity.x;
-			
+			context.font = "25px Arial";
 			context.fillText(padlx, 10, 50);
 		
-		});
+	});//devbicemotion
 		
-		timer = setInterval(draw, 5);
-		draw();
+	timer = setInterval(draw, 5);
+	draw();
 		
-	}
+}//ondeviceready
 
 	function ball(x, y , r){
 		context.fillStyle = "#00A3B1";
@@ -108,7 +99,7 @@ function onDeviceReady(){
 		
 		if (y > HEIGHT - (R + 1)){
 		
-			ausgabe = "GAME OVER, SCORE: " + counter;
+			var ausgabe = "GAME OVER, SCORE: " + counter;
 			context.font = "25px Arial";
 			context.fillText(ausgabe, 10, 50);
 			clearInterval(timer);
@@ -124,11 +115,11 @@ function onDeviceReady(){
 		
 		x = x + dx;
 		y = y - dy;
-	}
+	}//draw
 
-	init();
+	
 
-}//onDeviceReady
+
 </script>
 </body>
 
