@@ -12,15 +12,7 @@
 <canvas id="MeinCanvas"></canvas>
 <script>
 
-function writeorientation(event){
-	var winkelalpha = event.aplpha;
-	document.getElementById("accel").innerHTML = winkelalpha;
-};	
-	
-window.onload = function(){
- window.addEventListener("deviceorientation", writeorientation, false);
-	
-};
+
 	
 	
 	var x = 20;
@@ -41,7 +33,7 @@ window.onload = function(){
 	var WIDTH = canv.width;
 	var HEIGHT = canv.height;
 	
-	/*				
+					
 	document.addEventListener('keydown', function(event){
 			console.log(event);
 			console.log(event.key);
@@ -66,7 +58,7 @@ window.onload = function(){
 		
 	});//devbicemotion
 		
-	//timer = setInterval(draw, 5);
+	timer = setInterval(draw, 5);
 	draw();
 	
 	function ball(x, y , r){
@@ -124,7 +116,7 @@ window.onload = function(){
 		y = y - dy;
 	}//draw	
 	
-	*/
+	
 
 
 
